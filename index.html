@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop social media services and digital products at Oppy Social Media Accounts Plug.">
+  <title>Oppy Social Media Accounts Plug</title>
+  <style>
+    :root { --purple:#6d28d9; --deep:#3b0764; --pale:#f5f0ff; --ink:#211832; --muted:#6b6478; --white:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#fff; line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,92%); margin:auto; }
+    header { background:#fff; border-bottom:1px solid #eee7fa; position:sticky; top:0; z-index:10; }
+    .nav { display:flex; justify-content:space-between; align-items:center; gap:16px; min-height:74px; }
+    .brand { font-weight:850; letter-spacing:-.04em; color:var(--deep); font-size:1.08rem; }
+    .brand span { color:var(--purple); }
+    nav { display:flex; align-items:center; gap:22px; font-size:.94rem; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; border:0; border-radius:999px; background:var(--purple); color:#fff; padding:12px 19px; font-weight:750; cursor:pointer; box-shadow:0 8px 20px #6d28d926; }
+    .btn:hover { background:#5b21b6; }
+    .btn.outline { background:#fff; color:var(--purple); border:1px solid #d8c6ff; box-shadow:none; }
+    .hero { background:radial-gradient(circle at 85% 20%,#e8d8ff 0,transparent 32%),linear-gradient(135deg,#faf7ff,#f2eaff); padding:76px 0 70px; overflow:hidden; }
+    .hero-grid { display:grid; grid-template-columns:1.15fr .85fr; align-items:center; gap:36px; }
+    .eyebrow { display:inline-block; background:#e8dcff; color:#5420a7; padding:7px 12px; border-radius:99px; font-size:.8rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; }
+    h1 { font-size:clamp(2.45rem,5.5vw,4.5rem); line-height:1.04; letter-spacing:-.055em; margin:18px 0; max-width:720px; }
+    h1 em { color:var(--purple); font-style:normal; }
+    .lead { color:var(--muted); font-size:1.12rem; max-width:590px; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:27px; }
+    .mockup { background:#fff; border:1px solid #eadfff; border-radius:28px; padding:23px; box-shadow:0 24px 65px #35115c1a; transform:rotate(1.5deg); }
+    .mock-top { display:flex; align-items:center; gap:9px; border-bottom:1px solid #eee8f8; padding-bottom:15px; }
+    .dot { width:11px; height:11px; border-radius:50%; background:#d8c6ff; }
+    .mock-badge { margin-left:auto; background:#f2eaff; color:#6d28d9; border-radius:99px; padding:6px 10px; font-size:.75rem; font-weight:800; }
+    .mock-art { margin-top:18px; min-height:210px; border-radius:20px; background:linear-gradient(145deg,#7c3aed,#3b0764); color:white; padding:24px; display:flex; flex-direction:column; justify-content:space-between; }
+    .mock-art strong { font-size:1.9rem; line-height:1.05; max-width:230px; }
+    .mock-circles { display:flex; gap:10px; }
+    .mock-circles i { display:block; width:38px; height:38px; border:1px solid #ffffff77; border-radius:50%; background:#ffffff22; }
+    section { padding:68px 0; }
+    .section-head { max-width:650px; margin-bottom:28px; }
+    h2 { font-size:clamp(1.8rem,3.5vw,2.7rem); line-height:1.12; letter-spacing:-.04em; margin:0 0 12px; }
+    .sub { color:var(--muted); margin:0; }
+    .products { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .product { border:1px solid #ece5f7; border-radius:22px; padding:22px; background:#fff; display:flex; flex-direction:column; min-height:270px; }
+    .product-icon { width:48px; height:48px; display:grid; place-items:center; background:var(--pale); border-radius:15px; font-size:1.45rem; margin-bottom:17px; }
+    .product h3 { margin:0 0 8px; font-size:1.12rem; }
+    .price { color:var(--purple); font-size:1.25rem; font-weight:850; margin:0 0 16px; }
+    .product p { color:var(--muted); font-size:.94rem; margin:0 0 18px; }
+    .product .btn { margin-top:auto; align-self:flex-start; }
+    .note { color:#6b6478; font-size:.85rem; margin-top:16px; }
+    .why { background:#faf8ff; }
+    .features { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .feature { background:#fff; border:1px solid #eee7fa; border-radius:18px; padding:22px; }
+    .feature h3 { margin:0 0 8px; font-size:1.03rem; }
+    .feature p { color:var(--muted); margin:0; font-size:.94rem; }
+    .cta { background:linear-gradient(135deg,#4c1d95,#7c3aed); color:#fff; border-radius:28px; padding:38px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .cta p { color:#e9ddff; margin-bottom:0; }
+    .cta .btn { background:#fff; color:var(--purple); box-shadow:none; white-space:nowrap; }
+    footer { border-top:1px solid #eee7fa; padding:26px 0; color:var(--muted); font-size:.9rem; }
+    .footer-row { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    @media (max-width:760px) {
+      .nav { padding:14px 0; align-items:flex-start; flex-direction:column; }
+      nav { width:100%; justify-content:space-between; gap:10px; font-size:.86rem; }
+      nav .btn { padding:9px 13px; }
+      .hero { padding:52px 0; }
+      .hero-grid { grid-template-columns:1fr; }
+      .mockup { transform:none; max-width:480px; }
+      .products,.features { grid-template-columns:1fr; }
+      .product { min-height:unset; }
+      .cta { align-items:flex-start; flex-direction:column; padding:28px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">OPPY <span>PLUG</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#about">Why Oppy</a>
+      <a href="#payments">Payments</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#shop">Explore services</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Your digital plug</span>
+        <h1>Make your next move <em>online.</em></h1>
+        <p class="lead">Welcome to Oppy Social Media Accounts Plug — your starting point for discovering digital products and social media services. Browse our offers and contact us to confirm availability, pricing, and delivery.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#shop">Browse services&nbsp; →</a>
+          <a class="btn outline" href="#contact">Ask a question</a>
+        </div>
+      </div>
+      <div class="mockup" aria-label="Decorative preview card">
+        <div class="mock-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="mock-badge">OPPY DIGITAL</span></div>
+        <div class="mock-art">
+          <span>YOUR ONLINE TOOLKIT</span>
+          <strong>Simple. Digital. Convenient.</strong>
+          <div class="mock-circles"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Social media services</h2>
+        <p class="sub">Choose a service, check its listed price, and tap the WhatsApp button to place an enquiry or order. We will confirm the details and delivery time before payment.</p>
+      </div>
+      <div class="products">
+        <article class="product"><div class="product-icon" aria-hidden="true">f</div><h3>Facebook Business Page Setup</h3><p>Help setting up and configuring your business Page with your permission.</p><p class="price">₦3,000</p><a class="btn" href="https://wa.me/2348083572664?text=Hello%20Oppy%2C%20I%27d%20like%20to%20order%20Facebook%20Business%20Page%20setup%20for%20%E2%82%A63000.">Order on WhatsApp</a></article>
+        <article class="product"><div class="product-icon" aria-hidden="true">◎</div><h3>Instagram Professional Profile Setup</h3><p>Profile setup guidance, bio writing, profile optimisation, and branding support.</p><p class="price">₦3,000</p><a class="btn" href="https://wa.me/2348083572664?text=Hello%20Oppy%2C%20I%27d%20like%20to%20order%20Instagram%20professional%20profile%20setup%20for%20%E2%82%A63000.">Order on WhatsApp</a></article>
+        <article class="product"><div class="product-icon" aria-hidden="true">♪</div><h3>TikTok Business Profile Setup</h3><p>Business profile configuration guidance, branding, and content support, subject to platform rules.</p><p class="price">₦3,000</p><a class="btn" href="https://wa.me/2348083572664?text=Hello%20Oppy%2C%20I%27d%20like%20to%20order%20TikTok%20business%20profile%20setup%20for%20%E2%82%A63000.">Order on WhatsApp</a></article>
+        <article class="product"><div class="product-icon" aria-hidden="true">𝕏</div><h3>X Profile Setup</h3><p>Profile setup guidance, bio writing, branding, and content support.</p><p class="price">₦2,500</p><a class="btn" href="https://wa.me/2348083572664?text=Hello%20Oppy%2C%20I%27d%20like%20to%20order%20X%20profile%20setup%20for%20%E2%82%A62500.">Order on WhatsApp</a></article>
+        <article class="product"><div class="product-icon" aria-hidden="true">👻</div><h3>Snapchat Profile Support</h3><p>Authorised setup guidance, profile support, and branding.</p><p class="price">₦2,500</p><a class="btn" href="https://wa.me/2348083572664?text=Hello%20Oppy%2C%20I%27d%20like%20to%20order%20Snapchat%20profile%20support%20for%20%E2%82%A62500.">Order on WhatsApp</a></article>
+        <article class="product"><div class="product-icon" aria-hidden="true">🎨</div><h3>One Promotional Design</h3><p>One promotional graphic for your social media page or campaign.</p><p class="price">₦2,000</p><a class="btn" href="https://wa.me/2348083572664?text=Hello%20Oppy%2C%20I%27d%20like%20to%20order%20one%20promotional%20design%20for%20%E2%82%A62000.">Order on WhatsApp</a></article>
+        <article class="product"><div class="product-icon" aria-hidden="true">🖼️</div><h3>Five Promotional Designs</h3><p>A set of five promotional graphics for your business or social media content.</p><p class="price">₦8,000</p><a class="btn" href="https://wa.me/2348083572664?text=Hello%20Oppy%2C%20I%27d%20like%20to%20order%20five%20promotional%20designs%20for%20%E2%82%A68000.">Order on WhatsApp</a></article>
+        <article class="product"><div class="product-icon" aria-hidden="true">✍️</div><h3>Ten Social Media Captions</h3><p>Ten written captions for social media posts. Topic and tone agreed before work begins.</p><p class="price">₦3,000</p><a class="btn" href="https://wa.me/2348083572664?text=Hello%20Oppy%2C%20I%27d%20like%20to%20order%20ten%20social%20media%20captions%20for%20%E2%82%A63000.">Order on WhatsApp</a></article>
+      </div>
+      <p class="note">All prices are confirmed before an order. We only support legitimate services and numbers used in line with the relevant app's terms. Never share verification codes or passwords.</p>
+    </div>
+  </section>
+
+  <section id="payments" class="why">
+    <div class="wrap">
+      <div class="section-head"><h2>Payment options</h2><p class="sub">We plan to support bank transfer and secure online checkout. Payment details are confirmed before you pay.</p></div>
+      <div class="features">
+        <div class="feature"><h3>Bank transfer</h3><p>Contact Oppy to receive verified bank details for your specific order. Always confirm the account name and amount before transferring. Bank details are not published on this page.</p><a class="btn" href="#contact">Request transfer details</a></div>
+        <div class="feature"><h3>Online checkout</h3><p>Secure online checkout is not connected yet. It will be enabled after a payment provider account is set up and a real payment link is added.</p><a class="btn outline" href="#contact">Ask about payment</a></div>
+        <div class="feature"><h3>Before you pay</h3><p>Confirm the service, total price, delivery time, and refund terms with Oppy. Keep your receipt and never send passwords or one-time codes.</p><a class="btn outline" href="#contact">Confirm an order</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>A straightforward way to get started</h2>
+        <p class="sub">Clear information and a simple enquiry process help customers know what to expect.</p>
+      </div>
+      <div class="features">
+        <div class="feature"><h3>Clear product details</h3><p>Add accurate descriptions, pricing, delivery times, and any important conditions.</p></div>
+        <div class="feature"><h3>Direct enquiries</h3><p>Give customers a simple way to ask questions before they place an order.</p></div>
+        <div class="feature"><h3>Mobile-friendly design</h3><p>This layout adapts to phones, tablets, and desktop screens.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>Ready to make an enquiry?</h2>
+          <p>Message Oppy to ask about products, prices, and availability.</p>
+        </div>
+        <div class="hero-actions" style="margin-top:0">
+          <a class="btn" id="whatsappLink" href="https://wa.me/2348083572664?text=Hello%20Oppy%20Plug%2C%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          <a class="btn outline" id="emailLink" href="mailto:adeowuopeyemiibrahim182@gmail.com?subject=Oppy%20product%20enquiry">Email Oppy</a>
+        </div>
+      </div>
+      <p class="note">Your WhatsApp and email contact links are configured. Contact Oppy to confirm product availability, prices, and delivery details.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© <span id="year">2026</span> Oppy Social Media Accounts Plug</span>
+    <span>Digital products • Social media services • Customer enquiries</span>
+  </div>
+</footer>
+</body>
+</html>
