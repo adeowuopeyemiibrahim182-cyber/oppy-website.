@@ -175,5 +175,68 @@
     <span>Digital products • Social media services • Customer enquiries</span>
   </div>
 </footer>
+  
+<!-- Oppy Plug customer authentication -->
+<section id="oppy-auth" style="max-width:480px;margin:40px auto;padding:24px;background:#f7f2ff;border-radius:16px;font-family:Arial,sans-serif;color:#29134d">
+  <h2>Customer Account</h2>
+  <p>Sign up or log in to Oppy Plug.</p>
+
+  <label for="oppy-email">Email address</label>
+  <input id="oppy-email" type="email" autocomplete="email" placeholder="Enter your email" style="display:block;width:100%;padding:12px;margin:8px 0 16px;box-sizing:border-box">
+
+  <label for="oppy-password">Password</label>
+  <input id="oppy-password" type="password" autocomplete="current-password" placeholder="At least 6 characters" style="display:block;width:100%;padding:12px;margin:8px 0 16px;box-sizing:border-box">
+
+  <button id="oppy-signup" type="button" style="padding:12px;background:#6b21a8;color:white;border:0;border-radius:8px">Sign Up</button>
+  <button id="oppy-login" type="button" style="padding:12px;background:white;color:#6b21a8;border:1px solid #6b21a8;border-radius:8px">Log In</button>
+  <p id="oppy-auth-message" role="status" aria-live="polite"></p>
+</section>
+
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+// Replace these two placeholders with your own Supabase values.
+const SUPABASE_URL = 'https://cxgiaimwntvioyjlilmt.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_sk7oE-gt6kHf_MQ4RfjwEg_aaX5oLze';
+
+const message = document.getElementById('oppy-auth-message');
+
+if (SUPABASE_URL.startsWith('https://') &&
+    SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_')) {
+  const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+  async function authenticate(action) {
+    const email = document.getElementById('oppy-email').value.trim();
+    const password = document.getElementById('oppy-password').value;
+
+    if (!email || !password) {
+      message.textContent = 'Please enter your email and password.';
+      return;
+    }
+
+    message.textContent = 'Please wait...';
+
+    const result = action === 'signup'
+      ? await supabase.auth.signUp({ email, password })
+      : await supabase.auth.signInWithPassword({ email, password });
+
+    if (result.error) {
+      message.textContent = result.error.message;
+    } else if (action === 'signup' && !result.data.session) {
+      message.textContent = 'Account created. Check your email to confirm your account.';
+    } else {
+      message.textContent = action === 'signup'
+        ? 'Account created successfully!'
+        : 'You are logged in successfully!';
+    }
+  }
+
+  document.getElementById('oppy-signup').addEventListener('click', () => authenticate('signup'));
+  document.getElementById('oppy-login').addEventListener('click', () => authenticate('login'));
+} else {
+  message.textContent = 'Website setup is incomplete. Please configure the Supabase URL and publishable key.';
+}
+</script>
+
 </body>
 </html>
