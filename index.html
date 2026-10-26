@@ -84,7 +84,7 @@
   </div>
 </header>
 
-<main>
+<main id="oppy-protected-content" style="display:none">
   <section class="hero" id="home">
     <div class="wrap hero-grid">
       <div>
@@ -167,7 +167,7 @@
       <p class="note">Your WhatsApp and email contact links are configured. Contact Oppy to confirm product availability, prices, and delivery details.</p>
     </div>
   </section>
-</main>
+</mai
 
 <footer>
   <div class="wrap footer-row">
@@ -198,7 +198,21 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 // Replace these two placeholders with your own Supabase values.
 const SUPABASE_URL = 'https://cxgiaimwntvioyjlilmt.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_sk7oE-gt6kHf_MQ4RfjwEg_aaX5oLze';
+const protectedContent = document.getElementById('oppy-protected-content');
 
+function updateAccess(session) {
+  if (protectedContent) {
+    protectedContent.style.display = session ? '' : 'none';
+  }
+}
+
+supabase.auth.getSession().then(({ data }) => {
+  updateAccess(data.session);
+});
+
+supabase.auth.onAuthStateChange((_event, session) => {
+  updateAccess(session);
+});
 const message = document.getElementById('oppy-auth-message');
 
 if (SUPABASE_URL.startsWith('https://') &&
